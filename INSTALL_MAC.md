@@ -70,8 +70,8 @@ npm install
 ### From source (if you prefer to build yourself)
 
 ```bash
-# Clone the repo
-git clone https://github.com/lateralsummer/UnrealClaudeMac.git
+# Clone the repo (includes the MCP bridge submodule)
+git clone --recurse-submodules https://github.com/lateralsummer/UnrealClaudeMac.git
 cd UnrealClaudeMac
 
 # Install MCP bridge dependencies

@@ -73,7 +73,7 @@ $UE_ROOT/Engine/Build/BatchFiles/RunUAT.sh BuildPlugin \
 
 ## MCP Bridge Setup
 
-The MCP bridge requires Node.js >= 18.0.0:
+The MCP bridge is a git submodule and requires Node.js >= 18.0.0:
 
 ```bash
 # Install Node.js (Fedora)
@@ -81,6 +81,9 @@ sudo dnf install -y nodejs npm
 
 # Verify version
 node --version  # must be >= 18.0.0
+
+# Initialize the submodule (if you cloned without --recurse-submodules)
+git submodule update --init
 
 # Install bridge dependencies
 cd UnrealClaude/Resources/mcp-bridge

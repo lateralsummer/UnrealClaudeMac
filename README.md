@@ -9,7 +9,7 @@
 
 **Claude Code CLI integration for Unreal Engine 5.7** - Get AI coding assistance with built-in UE5.7 documentation context directly in the editor.
 
-> **Supported Platforms:** Windows (Win64), Linux, and macOS (Apple Silicon). On Windows please use Claude Code 2.1.52 or older if you run into tool issues.
+> **Supported Platforms:** Windows (Win64), Linux, and macOS (Apple Silicon). On Windows please use Claude Code 2.1.52 or older if you run into tool issues (2.1.71 seems ok from testing so far).
 
 ## Overview
 
@@ -63,9 +63,14 @@ claude -p "Hello, can you see me?"
 
 This plugin must be built from source for your platform and engine version. No prebuilt binaries are included.
 
-1. Clone this repository:
+1. Clone this repository (includes the MCP bridge submodule):
    ```bash
-   git clone https://github.com/Natfii/UnrealClaude.git
+   git clone --recurse-submodules https://github.com/Natfii/UnrealClaude.git
+   ```
+   If you already cloned without `--recurse-submodules`, run:
+   ```bash
+   cd UnrealClaude
+   git submodule update --init
    ```
 
 2. Build the plugin:
